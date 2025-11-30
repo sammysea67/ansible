@@ -11,12 +11,6 @@
     arch_mapping:
       x86_64: amd64
       aarch64: arm64
-  
-  pre_tasks:
-    - name: Remove existing Docker repo file to prevent apt lockouts
-      ansible.builtin.file:
-        path: /etc/apt/sources.list.d/docker.list
-        state: absent
         
   tasks:
     # -----------------------------------------------------------------------
